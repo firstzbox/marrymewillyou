@@ -13,14 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://marrymewillyou.com"),
   title: "Dear Bubu ❤️",
   description: "Every love story is beautiful, but ours is my favorite.",
-  keywords: [
-    "proposal",
-    "love",
-    "memories",
-    "dear bubu"
-  ],
   openGraph: {
     title: "Dear Bubu ❤️",
     description: "Every love story is beautiful, but ours is my favorite.",
