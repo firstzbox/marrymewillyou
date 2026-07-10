@@ -2,29 +2,50 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen overflow-hidden">
+      {/* Background Image */}
       <Image
         src="/images/Us.jpeg"
-        alt="Us together"
+        alt="Us Together"
         fill
         priority
-        className="object-cover"
+        className="object-cover scale-110 transition-transform duration-[8000] hover:scale-105"
       />
 
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/45 to-black/70" />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-        <h1 className="text-6xl mb-6">❤️</h1>
+      {/* Content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-8">
 
-        <h2 className="text-5xl font-bold mb-6">
-          Dear Bubu
-        </h2>
-
-        <p className="text-2xl max-w-2xl">
-          Every love story is beautiful,
-          <br />
-          but ours is my favorite.
+        <p className="uppercase tracking-[0.45em] text-sm mb-8">
+          FOR THE LOVE OF MY LIFE
         </p>
+
+        <h1 className="text-6xl md:text-8xl font-bold mb-8">
+          Dear Bubu ❤️
+        </h1>
+
+        <p className="text-xl md:text-3xl leading-relaxed max-w-2xl">
+          Before today...
+          <br />
+          I'd like us to relive
+          <br />
+          our favorite memories together.
+        </p>
+
+        <div className="absolute bottom-12 flex flex-col items-center float">
+
+          <span className="uppercase tracking-[0.3em] text-xs mb-2">
+            Scroll
+          </span>
+
+          <span className="text-3xl">
+            ↓
+          </span>
+
+        </div>
+
       </div>
     </section>
   );
