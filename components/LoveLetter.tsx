@@ -57,7 +57,7 @@ export default function LoveLetter() {
               </p>
 
               <h3 className="text-4xl md:text-5xl font-bold text-pink-500">
-                Roland ❤️
+                Bibi ❤️
               </h3>
             </div>
 

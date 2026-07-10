@@ -29,7 +29,7 @@ export default function Hero() {
         <p className="text-xl md:text-3xl leading-relaxed max-w-2xl">
           Before today...
           <br />
-          I'd like us to relive
+          I would like us to relive
           <br />
           our favorite memories together.
         </p>
