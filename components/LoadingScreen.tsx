@@ -1,8 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function LoadingScreen() {
+  const [dots, setDots] = useState(".");
+  const [hideLoading, setHideLoading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots((prev) => {
+        if (prev === "...") return ".";
+        return prev + ".";
+      });
+    }, 500);
+
+    const timer = setTimeout(() => {
+      setHideLoading(true);
+    }, 2200);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -32,14 +54,33 @@ export default function LoadingScreen() {
           Bubu
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.7 }}
-          transition={{ delay: 0.5 }}
-          className="max-w-xl text-lg leading-8 text-gray-500 md:text-xl"
-        >
-          Loading our story...
-        </motion.p>
+        <motion.div
+            animate={{
+                opacity: hideLoading ? 0 : 0.7,
+                y: hideLoading ? -10 : 0,
+            }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 text-lg leading-8 text-gray-500 md:text-xl"
+            >
+            <motion.span
+                animate={{
+                scale: [1, 1.25, 1],
+                opacity: [0.5, 1, 0.5],
+                }}
+                transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                }}
+                className="text-red-300"
+            >
+                ❤
+            </motion.span>
+
+            <p>
+                Loading our story{dots}
+            </p>
+            </motion.div>
 
       </div>
     </motion.div>
