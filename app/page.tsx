@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
 import FinalMessage from "@/components/FinalMessage";
-import LookUp from "@/components/LookUp";
+import LookUp from "@/components/TurnAround";
 import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
