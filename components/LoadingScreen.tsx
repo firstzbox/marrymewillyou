@@ -33,7 +33,7 @@ export default function LoadingScreen() {
       transition={{ duration: 1.5, ease: "easeInOut" }}
       className="fixed inset-0 z-50 bg-white"
     >
-      <div className="flex h-screen flex-col items-center justify-center px-6 pb-100 text-center">
+      <div className="relative flex h-screen flex-col items-center justify-center px-6 pb-100 text-center">
 
         <div className="flex flex-col items-center text-center">
 
