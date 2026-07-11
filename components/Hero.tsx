@@ -2,50 +2,40 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background Image */}
+    <section className="relative h-screen">
+      {/* Background */}
       <Image
-        src="/images/Us.jpeg"
-        alt="Us Together"
+        src="/images/cover.jpeg"
+        alt="Roland and Her"
         fill
         priority
-        className="object-cover scale-110 transition-transform duration-[8000] hover:scale-105"
+        className="object-cover"
       />
 
-      {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/45 to-black/70" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/45" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-8">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
 
-        <p className="uppercase tracking-[0.45em] text-sm mb-8">
-          FOR THE LOVE OF MY LIFE
+        <p className="mb-4 text-lg uppercase tracking-[0.4em]">
+          18 July 2026
         </p>
 
-        <h1 className="text-6xl md:text-8xl font-bold mb-8">
-          Dear Bubu ❤️
+        <h1 className="mb-6 text-6xl font-light md:text-7xl">
+          Bibi
+          <span className="mx-4 text-red-300">❤</span>
+          Bubu
         </h1>
 
-        <p className="text-xl md:text-3xl leading-relaxed max-w-2xl">
-          Before today...
-          <br />
-          I would like us to relive
-          <br />
-          our favorite memories together.
+        <p className="max-w-xl text-lg leading-8 md:text-xl">
+          Every love story is beautiful,
+          but ours is my favourite.
         </p>
 
-        <div className="absolute bottom-12 flex flex-col items-center float">
-
-          <span className="uppercase tracking-[0.3em] text-xs mb-2">
-            Scroll
-          </span>
-
-          <span className="text-3xl">
-            ↓
-          </span>
-
+        <div className="absolute bottom-12 animate-bounce text-sm tracking-widest">
+          SCROLL
         </div>
-
       </div>
     </section>
   );

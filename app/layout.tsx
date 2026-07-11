@@ -1,26 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-poppins",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://marrymewillyou.com"),
-  title: "Dear Bubu ❤️",
-  description: "Every love story is beautiful, but ours is my favorite.",
-  openGraph: {
-    title: "Dear Bubu ❤️",
-    description: "Every love story is beautiful, but ours is my favorite.",
-    images: ["/images/Us.jpeg"],
-  },
+  title: "Will You Marry Me?",
+  description: "A special day for us.",
 };
 
 export default function RootLayout({
@@ -29,10 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        suppressHydrationWarning
-        className={`${inter.variable} ${playfair.variable}`}
+        className={`${playfair.variable} ${poppins.variable}`}
       >
         {children}
       </body>
