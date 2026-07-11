@@ -7,10 +7,10 @@ export default function LoadingScreen() {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-white"
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      className="fixed inset-0 z-50 bg-white"
     >
-      <div className="text-center">
+      <div className="flex h-full flex-col items-center justify-center px-6 pb-100 text-center">
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -22,10 +22,10 @@ export default function LoadingScreen() {
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="mb-6 text-6xl font-light md:text-7xl text-gray-800"
+          className="mb-6 text-6xl font-light text-gray-800 md:text-7xl"
         >
           Bibi
           <span className="mx-4 text-red-300">❤</span>
@@ -36,7 +36,7 @@ export default function LoadingScreen() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 0.5 }}
-          className="max-w-xl text-lg leading-8 text-gray-500"
+          className="max-w-xl text-lg leading-8 text-gray-500 md:text-xl"
         >
           Loading our story...
         </motion.p>
