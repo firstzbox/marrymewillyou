@@ -36,3 +36,8 @@ h2,
 h3 {
   font-family: var(--font-playfair);
 }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeInSection from "./FadeInSection";
 
 const moments = [
   {
@@ -79,7 +80,8 @@ export default function Story() {
 
         <div className="space-y-28">
           {moments.map((moment, index) => (
-            <div
+            <FadeInSection key={moment.title}>
+                <div
               key={moment.title}
               className={`grid items-center gap-12 md:grid-cols-2 ${
                 index % 2 !== 0 ? "md:[&>*:first-child]:order-2" : ""
@@ -110,8 +112,9 @@ export default function Story() {
                   {moment.text}
                 </p>
               </div>
-            </div>
-          ))}
+                </div>
+            </FadeInSection>
+            ))}
         </div>
       </div>
     </section>
