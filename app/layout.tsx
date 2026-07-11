@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Will You Marry Me?",
+  title: "A Special Moment",
   description: "A special day for us.",
 };
 
