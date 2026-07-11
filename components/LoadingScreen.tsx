@@ -34,25 +34,31 @@ export default function LoadingScreen() {
     >
       <div className="flex h-full flex-col items-center justify-center px-6 pb-100 text-center">
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-4 text-lg uppercase tracking-[0.4em] text-gray-400"
-        >
-          17 July 2026
-        </motion.p>
+        <div className="flex flex-col items-center text-center">
 
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="mb-6 text-6xl font-light text-gray-800 md:text-7xl"
-        >
-          Bibi
-          <span className="mx-4 text-red-300">❤</span>
-          Bubu
-        </motion.h1>
+            <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-4 text-base uppercase tracking-[0.3em] text-gray-400 sm:text-lg sm:tracking-[0.4em]"
+            >
+                17 July 2026
+            </motion.p>
+
+            <motion.h1
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="mb-6 whitespace-nowrap text-5xl font-light text-gray-800 sm:text-6xl md:text-7xl"
+            >
+                Bibi
+                <span className="mx-3 text-red-300 sm:mx-4">
+                ❤
+                </span>
+                Bubu
+            </motion.h1>
+
+            </div>
 
         <motion.div
             animate={{
