@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CoupleTitle from "@/components/CoupleTitle";
 
 export default function Hero() {
   return (
@@ -22,11 +23,7 @@ export default function Hero() {
           17 July 2026
         </p>
 
-        <h1 className="mb-6 text-6xl font-light md:text-7xl">
-          Bibi
-          <span className="mx-4 text-red-300">❤</span>
-          Bubu
-        </h1>
+        <CoupleTitle className="mb-6 text-white" />
 
         <p className="max-w-xl text-lg leading-8 md:text-xl">
           Every love story is beautiful,

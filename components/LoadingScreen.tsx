@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import CoupleTitle from "@/components/CoupleTitle";
 
 export default function LoadingScreen() {
   const [dots, setDots] = useState(".");
@@ -45,18 +46,13 @@ export default function LoadingScreen() {
                 17 July 2026
             </motion.p>
 
-            <motion.h1
+            <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="mb-6 whitespace-nowrap text-5xl font-light text-gray-800 sm:text-6xl md:text-7xl"
-            >
-                Bibi
-                <span className="mx-3 text-red-300 sm:mx-4">
-                ❤
-                </span>
-                Bubu
-            </motion.h1>
+                >
+                <CoupleTitle className="text-gray-800 mb-6" />
+                </motion.div>
 
             </div>
 
