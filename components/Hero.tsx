@@ -17,13 +17,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/45 to-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pb-100 text-center text-white">
+      <div className="relative z-10 flex h-screen flex-col items-center justify-center px-6 pb-100 text-center text-white">
 
         <p className="mb-4 text-lg uppercase tracking-[0.4em]">
           17 July 2026
         </p>
 
-        <CoupleTitle className="mb-6 text-white" />
+        <h1 className="mb-6 whitespace-nowrap text-5xl font-light sm:text-6xl md:text-7xl">
+            Bibi
+            <span className="mx-3 text-red-300 sm:mx-4">
+                ❤
+            </span>
+            Bubu
+            </h1>
 
         <p className="max-w-xl text-lg leading-8 md:text-xl">
           Every love story is beautiful,
