@@ -10,9 +10,6 @@ export default function LookUp() {
           Turn Around
         </h1>
 
-        <p className="mx-auto max-w-xl text-lg leading-8 text-gray-600 sm:text-xl sm:leading-9">
-          Because I'd rather tell you this in person.
-        </p>
       </div>
     </section>
   );

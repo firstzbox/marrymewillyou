@@ -29,30 +29,21 @@ export default function FinalMessage() {
             </h2>
 
             <div className="space-y-6 text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
-              <p>Thank you for every laugh we've shared.</p>
+              <p>Thank you for every laughter we've shared.</p>
 
-              <p>Thank you for every adventure we've been on.</p>
+              <p>Thank you for every adventure we've taken together.</p>
 
-              <p>
-                Thank you for believing in me, supporting me, and loving me for
-                who I am.
-              </p>
+              <p>Thank you for always being by my side and loving me for who I am.</p>
 
-              <p>
-                Thank you for making the past two years the happiest years of my
-                life.
-              </p>
+              <p>Thank you for making the past two years so beautiful, meaningful, and unforgettable.</p>
 
-              <p>
-                Every memory you've just seen reminds me how incredibly lucky I
-                am to have you by my side.
-              </p>
+              <p>Every memory we've created reminds me how incredibly lucky I am to have you by my side.</p>
 
               <div className="pt-4">
                 <div className="mx-auto mb-6 h-px w-24 bg-rose-200 md:mx-0" />
 
                 <p className="text-xl font-light text-black sm:text-2xl">
-                  There's just one more thing I'd like to tell you...
+                  There's just one more thing...
                 </p>
               </div>
             </div>

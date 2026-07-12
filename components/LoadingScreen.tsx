@@ -30,21 +30,21 @@ export default function LoadingScreen() {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
+      transition={{ duration: 2.5, ease: "easeInOut" }}
       className="fixed inset-0 z-50 bg-white"
     >
       <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
           className="mb-4 text-xs uppercase tracking-[0.4em] text-gray-400 sm:text-sm md:text-base"
         >
           17 July 2026
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           className="mb-7"
@@ -57,7 +57,7 @@ export default function LoadingScreen() {
             opacity: hideLoading ? 0 : 0.75,
             y: hideLoading ? -10 : 0,
           }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1 }}
           className="flex items-center gap-3 text-sm text-gray-500 sm:text-base md:text-lg"
         >
           <motion.span

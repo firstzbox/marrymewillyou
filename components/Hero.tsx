@@ -26,9 +26,9 @@ export default function Hero() {
         <CoupleTitle className="mb-6 text-white" />
 
         <p className="max-w-xs text-base leading-7 text-white/90 sm:max-w-md sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
-          Every love story is beautiful,
+          Every moment is special,
           <br />
-          but ours is my favourite.
+          when we're together.
         </p>
 
         <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center animate-bounce">
