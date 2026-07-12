@@ -16,7 +16,7 @@ const moments = [
   },
   {
     image: "/images/First Trip.jpeg",
-    title: "Our First Trip Together",
+    title: "Our First Adventure Together",
     subtitle: "Our First Adventure",
     text: "Our first adventure together became a memory I'll always treasure. It wasn't about where we went, but the fact that we experienced it together. Every place is better with you beside me.",
   },
@@ -66,55 +66,56 @@ const moments = [
 
 export default function Story() {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-6 text-center text-5xl font-light">
+    <section className="bg-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+        <h2 className="mb-5 text-center text-4xl font-light sm:text-5xl lg:text-6xl">
           Our Story
         </h2>
 
-        <p className="mx-auto mb-20 max-w-2xl text-center text-lg text-gray-500">
+        <p className="mx-auto mb-14 max-w-2xl text-center text-base leading-8 text-gray-500 sm:mb-20 sm:text-lg">
           Every memory we've shared has brought us one step closer to this
           moment. Thank you for making the past two years the happiest chapter
           of my life.
         </p>
 
-        <div className="space-y-28">
+        <div className="space-y-16 sm:space-y-24 lg:space-y-28">
           {moments.map((moment, index) => (
             <FadeInSection key={moment.title}>
-                <div
-              key={moment.title}
-              className={`grid items-center gap-12 md:grid-cols-2 ${
-                index % 2 !== 0 ? "md:[&>*:first-child]:order-2" : ""
-              }`}
-            >
-              {/* Image */}
-              <div>
-                <Image
-                  src={moment.image}
-                  alt={moment.title}
-                  width={700}
-                  height={500}
-                  className="w-full rounded-[32px] border border-white/70 object-cover shadow-2xl ring-1 ring-black/5 transition-all duration-500 hover:scale-[1.02] hover:shadow-3xl"
-                />
-              </div>
-
-              {/* Text */}
-              <div>
-                <p className="mb-2 text-sm uppercase tracking-[0.3em] text-rose-400">
-                  {moment.subtitle}
-                </p>
-
-                <h3 className="mb-6 text-4xl font-light">
-                  {moment.title}
-                </h3>
-
-                <p className="text-lg leading-9 text-gray-600">
-                  {moment.text}
-                </p>
-              </div>
+              <div
+                className={`grid items-center gap-10 lg:gap-16 md:grid-cols-2 ${
+                  index % 2 !== 0 ? "md:[&>*:first-child]:order-2" : ""
+                }`}
+              >
+                {/* Image */}
+                <div className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5">
+                  <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[4/5]">
+                    <Image
+                      src={moment.image}
+                      alt={moment.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
                 </div>
+
+                {/* Text */}
+                <div className="text-center md:text-left">
+                  <p className="mb-3 text-xs uppercase tracking-[0.35em] text-rose-400 sm:text-sm">
+                    {moment.subtitle}
+                  </p>
+
+                  <h3 className="mb-5 text-3xl font-light sm:text-4xl lg:text-5xl">
+                    {moment.title}
+                  </h3>
+
+                  <p className="text-base leading-8 text-gray-600 sm:text-lg sm:leading-9">
+                    {moment.text}
+                  </p>
+                </div>
+              </div>
             </FadeInSection>
-            ))}
+          ))}
         </div>
       </div>
     </section>

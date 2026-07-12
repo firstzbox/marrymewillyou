@@ -13,11 +13,17 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+
     const timer = setTimeout(() => {
       setLoading(false);
+      document.body.style.overflow = "auto";
     }, 2500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   return (
@@ -31,9 +37,10 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 1.2,
+            duration: 1,
             ease: "easeOut",
           }}
+          className="overflow-x-hidden"
         >
           <Hero />
           <Story />
